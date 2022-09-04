@@ -48,6 +48,11 @@ const displayCatagoriesDetails = catagories => {
 
     toggleSpiner(true);
 
+    // found Message 
+
+    const foundNumber = document.getElementById('found-number');
+    foundNumber.innerText = catagories.length;
+    
     // No news section
 
     const noCatagory = document.getElementById('no-found-message');
