@@ -59,7 +59,7 @@ const displayCatagoriesDetails = catagories => {
     // No news section
 
     const noCatagory = document.getElementById('no-found-message');
-    
+
     if(catagories.length === 0){
         noCatagory.classList.remove('d-none');
     }
@@ -160,10 +160,5 @@ const displayCatagoriesModal = catagory => {
 
 }
 
-
-
-
-
-
-
+loadCatagoriesDetails('01')
 loadCatagories();
