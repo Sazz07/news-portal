@@ -43,16 +43,19 @@ const loadCatagoriesDetails = async category_id => {
 }
 
 const displayCatagoriesDetails = catagories => {
-
+    
     // loader start 
-
+    
     toggleSpiner(true);
-
+    
+    const newsContainer = document.getElementById('news-container');
+    newsContainer.innerHTML = ``;
+    
     // found Message 
 
     const foundNumber = document.getElementById('found-number');
     foundNumber.innerText = catagories.length;
-    
+
     // No news section
 
     const noCatagory = document.getElementById('no-found-message');
@@ -63,9 +66,17 @@ const displayCatagoriesDetails = catagories => {
         noCatagory.classList.add('d-none');
     }
 
+    // sort
+    catagories.sort((x, y) =>{
+        if(x.total_view < y.total_view){
+            return 1;
+        }
+        else{
+            return -1;
+        }
+    });
 
-    const newsContainer = document.getElementById('news-container');
-    newsContainer.innerHTML = ``;
+
 
     catagories.forEach(catagory => {
         const makeNewsDiv = document.createElement('div');
