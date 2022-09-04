@@ -50,7 +50,7 @@ const displayCatagoriesDetails = catagories => {
     
     const newsContainer = document.getElementById('news-container');
     newsContainer.innerHTML = ``;
-    
+
     // found Message 
 
     const foundNumber = document.getElementById('found-number');
@@ -59,6 +59,7 @@ const displayCatagoriesDetails = catagories => {
     // No news section
 
     const noCatagory = document.getElementById('no-found-message');
+    
     if(catagories.length === 0){
         noCatagory.classList.remove('d-none');
     }
