@@ -89,7 +89,7 @@ const displayCatagoriesDetails = catagories => {
             </div>
             <div class="col-md-8 col-sm-6">
                 <div class="card-body">
-                <h5 class="card-title">${catagory.title}</h5>
+                <h5 class="card-title fw-bold">${catagory.title}</h5>
                 <p class="card-text">${catagory.details.slice(0, 500)}...</p>
                 <div class="d-flex justify-content-between">
                 <div class="d-flex">
@@ -98,10 +98,10 @@ const displayCatagoriesDetails = catagories => {
                   class="rounded-full w-10 h-10"
                   alt="" 
                 />
-                <p class="ps-2">${catagory.author.name ? catagory.author.name : 'Author Unknown'}<br><label>${catagory.author.published_date ? catagory.author.published_date : 'Date not available'}</label></p>
+                <p class="ps-2 fw-semibold">${catagory.author.name ? catagory.author.name : 'Author Unknown'}<br><label>${catagory.author.published_date ? catagory.author.published_date : 'Date not available'}</label></p>
                 </div>
               <div>
-                <p><i class="fa fa-light fa-eye"></i> ${catagory.total_view ? catagory.total_view : 'No Views Yet'}</p>
+                <p class="text-success"><i class="fa fa-light fa-eye"></i> ${catagory.total_view ? catagory.total_view : 'No Views Yet'}</p>
               </div>
               <div>
                 <a onclick="loadCatagoriesModal('${catagory._id}')" data-bs-toggle="modal" data-bs-target="#catagoryDetailModal" href=""><i class="fa fa-solid fa-arrow-right"></i></a>
