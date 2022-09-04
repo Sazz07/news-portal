@@ -1,106 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily News Portal</title>
-    <!-- goggle font  -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <!-- icon link  -->
-    <script src="https://kit.fontawesome.com/eda1cce420.js" crossorigin="anonymous"></script>
-    <!-- bootstrap link  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <!-- <style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily News Portal</title>
+  <!-- goggle font  -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- icon link  -->
+  <script src="https://kit.fontawesome.com/eda1cce420.js" crossorigin="anonymous"></script>
+  <!-- bootstrap link  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <!-- <style>
       body{
         
       }
     </style> -->
 </head>
-<body class="bg-light">
-    <header>
-        <!-- navbar starts-->
-        <section class="container">
-            <nav class="navbar bg-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand"><span class="bg-primary p-1 text-light rounded">Sazz</span> <span class="text-primary fw-semibold">Portal</span> </a>
-                  <div class="d-flex">
-                    <a class="nav-link me-2" href="">News</a>
-                    <a class="nav-link" href="">Blog</a>
-                  </div>
-                </div>
-              </nav>
-        </section>
-        <hr class="container">
 
-        <!-- All catagory section -->
-        <section class="container">
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul id="catagories-container" class="navbar-nav">
-                      <!-- <li class="nav-item">
+<body class="bg-light">
+  <header>
+    <!-- navbar starts-->
+    <section class="container">
+      <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand"><span class="bg-primary p-1 text-light rounded">Daily</span> <span
+              class="text-primary fw-semibold">New's Portal</span> </a>
+          <div class="d-flex">
+            <a class="nav-link me-2" href="">News</a>
+            <a class="nav-link" href="">Blog</a>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <hr class="container">
+
+    <!-- All catagory section -->
+    <section class="container">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul id="catagories-container" class="navbar-nav">
+              <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Features</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#">Pricing</a>
                       </li> -->
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </section>
-    </header>
-
-    <main>
-
-      <section>
-        <div id="no-found-message" class="mt-4 d-none">
-          <h3 class="text-secondary text-center">No News Available in this Catagory.</h3>
-      </div>
-      </section>
-
-              <!-- loader -->
-              <section id="loader" class="d-none">
-                <div style="height: 400px" class="d-flex justify-content-center align-items-center">
-                    <div class="spinner-border text-secondary" role="status">
-                      <span class="visually-hidden">Loading...</span>
-                    </div>
-                </div>
-              </section>
-        <!-- All news in a catagory -->
-        <section class="container my-4">
-          <div id="news-container">
-
+            </ul>
           </div>
-        </section>
-        <!-- Modals -->
-        <section>
-          <div class="modal fade" id="catagoryDetailModal" tabindex="-1" aria-labelledby="catagoryDetailModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                <h5 class="modal-title" id="catagoryDetailModalLabel"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div id="catagory-details" class="modal-body">
-                ...
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-            </div>
         </div>
-        </section>
-    </main>    
-    <script src="js/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+      </nav>
+    </section>
+  </header>
+
+  <main>
+
+    <section>
+      <div id="no-found-message" class="mt-4 d-none">
+        <h3 class="text-secondary text-center">No News Available in this Catagory.</h3>
+      </div>
+    </section>
+
+    <!-- loader -->
+    <section id="loader" class="d-none">
+      <div style="height: 400px" class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border text-secondary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </section>
+    <!-- All news in a catagory -->
+    <section class="container my-4">
+      <div id="news-container">
+
+      </div>
+    </section>
+    <!-- Modals -->
+    <section>
+      <div class="modal fade" id="catagoryDetailModal" tabindex="-1" aria-labelledby="catagoryDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="catagoryDetailModalLabel"></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="catagory-details" class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>

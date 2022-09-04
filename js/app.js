@@ -44,6 +44,21 @@ const loadCatagoriesDetails = async category_id => {
 
 const displayCatagoriesDetails = catagories => {
 
+    // loader start 
+
+    toggleSpiner(true);
+
+    // No news section
+
+    const noCatagory = document.getElementById('no-found-message');
+    if(catagories.length === 0){
+        noCatagory.classList.remove('d-none');
+    }
+    else{
+        noCatagory.classList.add('d-none');
+    }
+
+
     const newsContainer = document.getElementById('news-container');
     newsContainer.innerHTML = ``;
 
@@ -81,6 +96,20 @@ const displayCatagoriesDetails = catagories => {
         `;
         newsContainer.appendChild(makeNewsDiv);
     });
+    // stop spinner 
+    toggleSpiner(false);
+}
+
+
+// toggle spiner
+const toggleSpiner = isLoading => {
+    const loaderSection = document.getElementById('loader');
+    if (isLoading) {
+        loaderSection.classList.remove('d-none')
+    }
+    else{
+        loaderSection.classList.add('d-none')
+    }
 }
 
 
@@ -100,6 +129,7 @@ const loadCatagoriesModal = async news_id => {
     }
 
 }
+
 
 const displayCatagoriesModal = catagory => {
 
